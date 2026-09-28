@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int vector[5];
+int a,suma;
+float promedio;
+
+int main(){
+    
+    for(a=0;a<5;a++){
+    printf("indique el numero que quiere guardar: \n");
+    scanf("%d", &vector[a]);
+    suma+=vector[a];
+    }
+    
+    printf("la suma es: %d \n", suma);
+    promedio=(float)suma /5;
+    printf("El promedio es: %.2f \n", promedio);
+    return 0;
+}

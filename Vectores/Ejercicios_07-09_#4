@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+void compararVectores(int v1[], int v2[], int n){
+    int i;
+
+    for (i = 0; i < n; i++){
+        printf("\nPosicion %d: ", i + 1);
+
+        if (v1[i] > v2[i]){
+            printf("%d es mayor que %d (Vector 1)", v1[i], v2[i]);
+        }
+        else if (v2[i] > v1[i]){
+            printf("%d es mayor que %d (Vector 2)", v2[i], v1[i]);
+        }
+        else{
+            printf("Los dos valores son iguales: %d", v1[i]);
+        }
+    }
+}
+
+int main(){
+    int n;
+
+    printf("Ingrese la cantidad de elementos: ");
+    scanf("%d", &n);
+
+    int v1[n];
+    int v2[n];
+
+    printf("\nCargue el primer vector:\n");
+
+    for (int i = 0; i < n; i++){
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &v1[i]);
+    }
+
+    printf("\nCargue el segundo vector:\n");
+
+    for (int i = 0; i < n; i++){
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &v2[i]);
+    }
+
+    printf("\n--- COMPARACION ---\n");
+
+    compararVectores(v1, v2, n);
+
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int vector1 [5], a, n, suma, promedio;
+
+int main(){
+    
+    for(a=0;a<5;a++){
+        printf("Ingrese su número\n");
+        scanf("%d", &n);
+        suma=suma+n;
+    }
+    
+    printf("La suma de los números es: %d \n", suma);
+    promedio=suma/5;
+    printf("El promedio de todos los valores es: %d \n", promedio);
+
+    return 0;
+}

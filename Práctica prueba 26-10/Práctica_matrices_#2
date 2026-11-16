@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int matriz[3][2][2];
+int b, j, i;
+
+int main(){
+    for(b=0;b<3;b++){
+        for(j=0;j<2;j++){
+            for(i=0;i<2;i++){
+                printf("Ingrese su número para la posición [%d][%d][%d]\n", b, j, i);
+                scanf("%d", &matriz[b][j][i]);
+            }
+        }
+    }
+    
+    return 0;
+}

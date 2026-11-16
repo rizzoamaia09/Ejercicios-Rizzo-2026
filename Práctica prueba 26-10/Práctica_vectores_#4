@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int vector1 [3];
+int vector2 [3];
+
+int a, b, mayor1, mayor2;
+
+int main(){
+    
+    for(a=0;a<3;a++){
+        printf("Ingrese su número (Vector 1) \n");
+        scanf("%d", &vector1[a]);
+    }
+    
+    for(b=0;b<3;b++){
+        printf("Ingrese su número (Vector 2) \n");
+        scanf("%d", &vector2[b]);
+    }
+    
+    mayor1 = vector1[0];
+    mayor2 = vector2[0];
+    
+    for(a=1;a<3;a++){
+        if(vector1[a]>mayor1){
+            mayor1=vector1[a];
+        }
+    }
+    
+    for(b=1;b<3;b++){
+        if(vector2[b]>mayor2){
+            mayor2=vector2[b];
+        }
+    }
+    
+    
+    if(mayor1>mayor2){
+        printf("El número más grande es %d del vector 1\n", mayor1);
+    }
+    else{
+        printf("El número más grande es %d del vector 2\n", mayor2);
+    }
+    
+    
+
+    return 0;
+}

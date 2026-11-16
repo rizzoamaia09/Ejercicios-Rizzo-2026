@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+char respuesta;
+int opcion;
+
+typedef struct Persona{
+    int edad;
+    char iniciales[4];
+    char sangre;
+    float altura;
+}Paciente;
+
+int main(){
+    
+    Paciente paciente1;
+    
+    printf("Ingrese la edad del paciente\n");
+    scanf("%d", &paciente1.edad);
+    
+    printf("Ingrese las iniciales del paciente\n");
+    scanf("%s", &paciente1.iniciales);
+    
+    printf("Ingrese el tipo de sangre del paciente\n");
+    scanf(" %c", &paciente1.sangre);
+    
+    printf("Ingrese la altura del paciente\n");
+    scanf("%f", &paciente1.altura);
+    
+    printf("Desea imprimir algun valor es especifico? (S/N)\n");
+    scanf(" %c", &respuesta);
+    
+    while(respuesta=='s'||respuesta=='S'){
+        printf("1)Edad, 2)Iniciales, 3)Tipo de sangre, 4)Altura\n");
+        scanf("%d", &opcion);
+        
+        if(opcion==1){
+            printf("%d \n", paciente1.edad);
+            
+            printf("Desea imprimir otro valor es especifico? (S/N)\n");
+            scanf(" %c", &respuesta);
+        } else if(opcion==2){
+            printf("%s \n", paciente1.iniciales);
+            
+            printf("Desea imprimir otro valor es especifico? (S/N)\n");
+            scanf(" %c", &respuesta);
+        } else if(opcion==3){
+            printf(" %c \n", paciente1.sangre);
+            
+            printf("Desea imprimir otro valor es especifico? (S/N)\n");
+            scanf(" %c", &respuesta);
+        } else if(opcion==4){
+            printf("%f \n", paciente1.altura);
+            
+            printf("Desea imprimir otro valor es especifico? (S/N)\n");
+            scanf(" %c", &respuesta);
+        }
+        
+        
+    }

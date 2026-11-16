@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int vector [10], a, b, mayor;
+float suma;
+float promedio;
+
+int main(){
+    
+    for(a=0;a<10;a++){
+        printf("Ingrese su número\n");
+        scanf("%d", &vector[a]);
+        suma=vector[a]+suma;
+    }
+    
+    promedio=suma/10;
+    
+    mayor=vector[0];
+    
+    for(b=1;b<10;b++){
+        if(vector[b]>mayor){
+            mayor=vector[b];
+        }
+    }
+    
+    
+    printf("La suma de todos los valores es: %.2f \n", suma);
+    printf("El promedio es: %.2f \n", promedio);
+    printf("El mayor es: %d \n", mayor);
+
+    return 0;
+}

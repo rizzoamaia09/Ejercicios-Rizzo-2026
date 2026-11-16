@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int And [4][3];
+int Or [4][3];
+int Xor [4][3];
+int Nand [4][3];
+
+int j, i;
+
+int main(){
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("Indique el valor para la posición [%d][%d] para el And\n", j, i);
+            scanf("%d", &And [j][i]);
+        }
+    }
+    
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("Indique el valor para la posición [%d][%d] para el Or\n", j, i);
+            scanf("%d", &Or [j][i]);
+        }
+    }
+    
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("Indique el valor para la posición [%d][%d] para el Xor\n", j, i);
+            scanf("%d", &Xor [j][i]);
+        }
+    }
+    
+    printf("VALORES INGRESADOS PARA EL AND\n");
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("%d", And[j][i]);
+        }
+        printf("\n");
+    }
+    
+    printf("VALORES INGRESADOS PARA EL OR\n");
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("%d", Or[j][i]);
+        }
+        printf("\n");
+    }
+    
+    printf("VALORES INGRESADOS PARA EL XOR\n");
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("%d", Xor[j][i]);
+        }
+        printf("\n");
+    }
+    
+    printf("TABLA DE VERDAD NAND\n");
+    int Nand [4][3] = {
+        {0, 0, 1},
+        {0, 1, 1},
+        {1, 0, 1},
+        {1, 1, 0}
+    };
+    
+    for(j=0;j<4;j++){
+        for(i=0;i<3;i++){
+            printf("%d", Nand[j][i]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

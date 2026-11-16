@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+typedef struct alumno {
+    char nombre[20];
+    int edad;
+    int año;
+} Alumno;
+
+int main() {
+    Alumno alumno1;
+    char respuesta;
+    int opcion;
+
+    printf("Ingrese el nombre del alumno\n");
+    scanf(" %s", alumno1.nombre);
+    printf("Ingrese la edad del alumno\n");
+    scanf("%d", &alumno1.edad);
+    printf("Ingrese el año del alumno\n");
+    scanf("%d", &alumno1.año);
+
+    printf("Los datos ingresados fueron:\n");
+    printf("Nombre: %s\n", alumno1.nombre);
+    printf("Edad: %d\n", alumno1.edad);
+    printf("Año: %d\n", alumno1.año);
+
+    printf("Desea modificar algun valor? (S/N)\n");
+    scanf(" %c", &respuesta);
+
+    while (respuesta == 's' || respuesta == 'S') {
+        printf("Modificar nombre (1), edad (2), año (3)\n");
+        scanf("%d", &opcion);
+
+        if (opcion == 1) {
+            printf("Ingrese el nombre del alumno\n");
+            scanf(" %s", alumno1.nombre);
+        } else if (opcion == 2) {
+            printf("Ingrese la edad del alumno\n");
+            scanf("%d", &alumno1.edad);
+        } else if (opcion == 3) {
+            printf("Ingrese el año del alumno\n");
+            scanf("%d", &alumno1.año);
+        }
+        
+        printf("Los datos ingresados fueron:\n");
+        printf("Nombre: %s\n", alumno1.nombre);
+        printf("Edad: %d\n", alumno1.edad);
+        printf("Año: %d\n", alumno1.año);
+        
+        printf("Desea modificar algun valor? (S/N)\n");
+        scanf(" %c", &respuesta);
+    }
+
+    printf("Finalizado\n");
+
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(){
+    typedef struct{
+        float peso;
+    } Blanco;
+
+    typedef struct{
+        float peso;
+    } Negro;
+
+    typedef struct{
+        float peso;
+    } Amargo;
+
+    Blanco chocoBlanco;
+    Negro chocoNegro;
+    Amargo chocoAmargo;
+
+    printf("Ingrese el peso del chocolate blanco:\n");
+    scanf("%f", &chocoBlanco.peso);
+    
+    printf("Ingrese el peso del chocolate negro:\n");
+    scanf("%f", &chocoNegro.peso);
+    
+    printf("Ingrese el peso del chocolate amargo:\n");
+    scanf("%f", &chocoAmargo.peso);
+
+    printf("Peso chocolate blanco: %f\n", chocoBlanco.peso);
+    printf("Peso chocolate negro: %f\n", chocoNegro.peso);
+    printf("Peso chocolate amargo: %f\n", chocoAmargo.peso);
+
+    return 0;
+}

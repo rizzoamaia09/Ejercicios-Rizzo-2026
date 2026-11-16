@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int vector [4], a, n, i;
+char respuesta;
+
+int main(){
+    
+    for(a=0;a<4;a++){
+        printf("Ingrese su número \n");
+        scanf("%d", &vector[a]);
+    }
+    
+    printf("Ingrese el indice del dato que quiere \n");
+    scanf("%d", &i);
+    printf("El dato es %d \n", vector[i]);
+    
+    printf("Desea continuar?(S/N)\n");
+    scanf(" %c", &respuesta);
+    
+    while(respuesta=='S'||respuesta=='s'){
+        printf("Ingrese el indice del dato que quiere \n");
+        scanf("%d", &i);
+        printf("El dato es %d \n", vector[i]);
+        
+        printf("Desea continuar?(S/N)\n");
+        scanf(" %c", &respuesta);
+    }
+
+
+    return 0;
+}

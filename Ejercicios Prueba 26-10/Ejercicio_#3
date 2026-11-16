@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+char respuesta;
+int opcion;
+
+int main(){
+    
+    typedef struct{
+        int edad;
+        char raza[20];
+        float peso;
+    } Mascota;
+    
+    Mascota perro1;
+    
+    printf("Indique la edad de su mascota\n");
+    scanf("%d", &perro1.edad);
+    
+    printf("Indique la raza de su perro\n");
+    scanf("%s", perro1.raza);
+    
+    printf("Indique el peso de su perro\n");
+    scanf("%f", &perro1.peso);
+    
+    printf("VALORES INGRESADOS\n");
+    printf("Edad: %d \n", perro1.edad);
+    printf("Raza: %s \n", perro1.raza);
+    printf("Peso: %.2f \n", perro1.peso);
+    
+    printf("Desea modificar algún valor? (S/N)\n");
+    scanf(" %c", &respuesta);
+    
+    while(respuesta == 's' || respuesta == 'S'){
+        printf("Modificar: 1)Edad 2)Raza 3)Peso\n");
+        scanf("%d", &opcion);
+        
+        if(opcion == 1){
+            printf("Indique el dato modificado\n");
+            scanf("%d", &perro1.edad);
+        } else if(opcion == 2){
+            printf("Indique el dato modificado\n");
+            scanf("%s", perro1.raza);
+        } else if(opcion == 3){
+            printf("Indique el dato modificado\n");
+            scanf("%f", &perro1.peso);
+        }
+        
+        printf("Desea modificar algún valor? (S/N)\n");
+        scanf(" %c", &respuesta);
+    }
+    
+    printf("VALORES INGRESADOS\n");
+    printf("Edad: %d \n", perro1.edad);
+    printf("Raza: %s \n", perro1.raza);
+    printf("Peso: %.2f \n", perro1.peso);
+
+    return 0;
+}

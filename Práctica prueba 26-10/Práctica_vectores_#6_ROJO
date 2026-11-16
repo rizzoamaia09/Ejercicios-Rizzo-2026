@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+int vector [5], a, opcion, indice, modificacion;
+char siono, respuesta;
+
+int main(){
+    
+    for(a=0;a<5;a++){
+        printf("Ingrese su número \n");
+        scanf("%d", &vector[a]);
+    }
+    
+    printf("1) Buscar valor \n 2) Modificar valor \n 3) Imprimir valores\n");
+    scanf("%d", &opcion);
+    
+    if(opcion==1){
+        printf("Ingrese el indice del valor: \n");
+        scanf("%d", &indice);
+        printf("El valor es: %d \n", vector[indice]);
+        
+        printf("Quieres buscar otro valor? (S/N)\n");
+        scanf(" %c", &siono);
+        
+        while(siono=='s'||siono=='S'){
+        printf("Ingrese el indice del valor: \n");
+        scanf("%d", &indice);
+        printf("El valor es: %d \n", vector[indice]);
+        
+        printf("Quieres buscar otro valor? (S/N)\n");
+        scanf(" %c", &siono);
+        }
+    }
+    
+    if(opcion==2){
+        printf("Ingrese el indice del valor a modificar \n");
+        scanf("%d", &indice);
+        printf("Ingrese por que valor lo quiere modificar \n");
+        scanf("%d", &modificacion);
+        
+        vector[indice]=modificacion;
+        printf("El valor fue modificado \n");
+        
+        printf("Quieres modificar otro valor? (S/N) \n");
+        scanf(" %c", &siono);
+        
+        while(siono=='s'||siono=='S'){
+            printf("Ingrese el indice del valor a modificar \n");
+            scanf("%d", &indice);
+            printf("Ingrese por que valor lo quiere modificar \n");
+            scanf("%d", &modificacion);
+            
+            vector[indice]=modificacion;
+            printf("El valor fue modificado \n");
+            
+            printf("Quieres modificar otro valor? (S/N) \n");
+            scanf(" %c", &siono);
+        }
+    }
+    
+    if(opcion==3){
+        printf("Los valores son: \n");
+        for(a=0;a<5;a++){
+            printf("%d ", vector[a]);
+        }
+    }
+    
+    printf("Terminaste? (S/N)");
+    scanf(" %c", &siono);
+    if(siono=='s'||siono=='S'){
+        printf("Finalizado");
+        
+    }else{
+        printf("1) Buscar valor \n 2) Modificar valor \n 3) Imprimir valores");
+        scanf(" %c", &respuesta);
+        
+    }
+    
+    return 0;
+}
